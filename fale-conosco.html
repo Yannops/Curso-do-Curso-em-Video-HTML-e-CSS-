@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/_css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="/_css/form.css"/>
+    <title>Tudo Sobre o Google Glass</title>
+    <script>
+        function calctotal(){
+            var quant = parseInt(document.getElementById('cquant').value)
+            total = quant * 4900
+            document.getElementById('ctotal').value = total
+        }
+    </script>
+</head>
+
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+            <img id="icone" src="/_imagens/contato.png" alt="ÓculosGoogle" />
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmouseover="mudafoto('_imagens/home.png')"
+                        onmouseout="mudafoto('_imagens/contato.png')"><a href="/index.html">Home</a></li>
+                    <li onmouseover="mudafoto('_imagens/especificacoes.png')"
+                        onmouseout="mudafoto('_imagens/contato.png')"><a
+                            href="/specs.html">Especificações</a></li>
+                    <li onmouseover="mudafoto('_imagens/fotos.png')"
+                        onmouseout="mudafoto('_imagens/contato.png')"><a href="/fotos.html">Fotos</a></li>
+                    <li onmouseover="mudafoto('_imagens/multimidia.png')"
+                        onmouseout="mudafoto('_imagens/contato.png')"><a
+                            href="/multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudafoto('_imagens/contato.png')"
+                        onmouseout="mudafoto('_imagens/contato.png')"><a
+                            href="/fale-conosco.html">Fale-Conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+                <form method="POST" id="fcontato" action="">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                            <p><label for="cnome">Nome:</label><input maxlength="20" size="20" type="text" placeholder="Nome" name="tnome" id="cnome" /></p>
+                            <p><label for="csenha">Senha:</label><input type="password" maxlength="8" size="8" placeholder="Senha" name="tsenha" id="csenha"/></p>
+                            <p><label for="cemail">E-mail:</label><input type="email" placeholder="E-mail" name="temail" id="cemail"/></p>
+                            <fieldset id="sexo">
+                                <legend>Sexo:</legend>
+                                <input type="radio" name="rsexo" id="msexo" checked/><label for="msexo">Masculino</label><br/>
+                                <input type="radio" name="rsexo" id="fsexo"/><label for="fsexo">Feminino</label>
+                            </fieldset>
+                            <p><label for="cnasc">Data de Nascimento:</label><input type="date" name="tnasc" id="cnasc"/></p>
+                    </fieldset>
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                            <p><label for="crua">Logradouro:</label><input type="text" name="trua" id="crua" maxlength="80" placeholder="Rua,Av,Etc..."/></p>
+                            <p><label for="cnum">Número:</label><input type="number" name="tnum" id="cnum" min="0" max="99999" placeholder="Número"/></p>
+                            <p><label for="cestado">Estado:</label><select name="testado" id="cestado">
+                                <optgroup label="Região-Norte">
+                                    <option value="1">AC</option>
+                                    <option value="2">AP</option>
+                                    <option value="3">AM</option>
+                                    <option value="4">PA</option>
+                                    <option value="5">RO</option>
+                                    <option value="6">RR</option>
+                                    <option value="7">TO</option>
+                                </optgroup>
+                                <optgroup label="Região-Nordeste">
+                                    <option value="8">AL</option>
+                                    <option value="9">BA</option>
+                                    <option value="10">CE</option>
+                                    <option value="11">MA</option>
+                                    <option value="12">PB</option>
+                                    <option value="13">PI</option>
+                                    <option value="14">PE</option>
+                                    <option value="15">RN</option>
+                                    <option value="16">SE</option>
+                                </optgroup>
+                                <optgroup label="Região-Centro-Oeste">
+                                    <option value="17">DF</option>
+                                    <option value="18">GO</option>
+                                    <option value="19">MT</option>
+                                    <option value="20">MS</option>
+                                </optgroup>
+                                <optgroup label="Região-Sudeste">
+                                    <option value="21">ES</option>
+                                    <option value="22">MG</option>
+                                    <option value="23">RJ</option>
+                                    <option value="24" selected>SP</option>
+                                </optgroup>
+                                <optgroup label="Região-Sul">
+                                    <option value="25">PR</option>
+                                    <option value="26">RS</option>
+                                    <option value="27">SC</option>
+                                </optgroup>
+                            </select></p>
+                            <p><label for="ccidade">Cidade:</label>
+                                <input type="text" name="tcidade" id="ccidade" placeholder="Cidade" maxlength="40" list="cidades"/>
+                                <datalist id="cidades">
+                                    <option value="Salto"></option>
+                                    <option value="Sorocaba"></option>
+                                    <option value="Campinas"></option>
+                                    <option value="Indaiatuba"></option>
+                                    <option value="Itu"></option>
+                                </datalist>
+                            </p>    
+                    </fieldset>
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                            <p><label for="curgencia">Grau de Urgência:</label>
+                                Mín&nbsp;&nbsp;<input type="range" name="trange" id="crange" min="0" max="10"/>&nbsp;&nbsp;Max
+                            </p>
+                            <p><label for="cmensagem">Mensagem:</label>
+                                <textarea name="tmensagem" id="cmensagem" cols="35" rows="5" placeholder="Digite Sua Mensagem"></textarea>
+                            </p>
+                    </fieldset>
+                    <fieldset id="queroglass">
+                        <legend>Quero um Google Glass</legend>
+                        <p><input type="checkbox" name="tadquirir" id="cadquirir" checked/><label for="cpedido">Gostaria de adquirir um Google Glass quando disponível</label>
+                        </p>
+                            <p><label for="ccor">Cor:</label><input type="color" name="tcor" id="ccor"/></p>
+                            <p><label for="cquant">Quantidade:</label><input type="number" name="tquant" id="cquant" value="0" oninput="calctotal()"/></p>
+                            <p><label for="ctotal">Preço Total: R$</label><input type="text" name="ttotal" id="ctotal" readonly placeholder="Total da Compra"/></p>
+                    </fieldset>                   
+                    <input type="image" name="tbutton" id="cbutton" src="/_imagens/botao-enviar.png"/>
+                </form>
+            </article>
+        </section>
+        <footer id="rodape">
+            <p> Copyright &copy; 2013 - by Gustavo Guanabara
+            <br /><a href="http://tiktok.com/@bitty_01" target="_blank">TikTok</a> | <a
+                href="http://instagram.com/bitty_jigatee" target="_blank">Instagram</a>
+            </p>
+        </footer>
+        </div>
+        <script src="/js/funcoes.js"></script>
+</body>
+</html>
